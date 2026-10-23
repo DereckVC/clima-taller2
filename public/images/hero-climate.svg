@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" width="100%" height="100%">
+  <defs>
+    <radialGradient id="spaceGrad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0e1e38"/>
+      <stop offset="70%" stop-color="#070b14"/>
+      <stop offset="100%" stop-color="#03050a"/>
+    </radialGradient>
+    <radialGradient id="earthGrad" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="35%" stop-color="#0284c7"/>
+      <stop offset="70%" stop-color="#0369a1"/>
+      <stop offset="100%" stop-color="#082f49"/>
+    </radialGradient>
+    <radialGradient id="atmosphereGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="75%" stop-color="#38bdf8" stop-opacity="0"/>
+      <stop offset="90%" stop-color="#38bdf8" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.8"/>
+    </radialGradient>
+    <linearGradient id="orbitGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" rx="36" fill="url(#spaceGrad)"/>
+
+  <!-- Star field particles -->
+  <circle cx="120" cy="80" r="1.5" fill="#ffffff" opacity="0.8"/>
+  <circle cx="280" cy="140" r="1.2" fill="#38bdf8" opacity="0.6"/>
+  <circle cx="780" cy="90" r="2" fill="#ffffff" opacity="0.9"/>
+  <circle cx="820" cy="240" r="1" fill="#38bdf8" opacity="0.7"/>
+  <circle cx="70" cy="480" r="1.8" fill="#10b981" opacity="0.5"/>
+  <circle cx="830" cy="520" r="1.5" fill="#ffffff" opacity="0.6"/>
+  <circle cx="680" cy="580" r="1" fill="#38bdf8" opacity="0.4"/>
+
+  <!-- Atmospheric Glow Ring -->
+  <circle cx="450" cy="310" r="215" fill="url(#atmosphereGlow)"/>
+
+  <!-- Earth Sphere -->
+  <circle cx="450" cy="310" r="190" fill="url(#earthGrad)"/>
+
+  <!-- Continents: South America & Peru Highlight -->
+  <g fill="#10b981" opacity="0.85">
+    <!-- North America contours -->
+    <path d="M370 170 Q400 150 430 170 Q450 190 410 210 Q380 200 370 170 Z" fill="#059669"/>
+    <!-- Central America bridge -->
+    <path d="M410 210 Q420 230 425 245 Q415 250 405 230 Z" fill="#059669"/>
+    <!-- South America main landmass -->
+    <path d="M420 245 Q470 260 480 310 Q475 360 440 420 Q410 440 405 400 Q400 350 405 300 Q410 260 420 245 Z" fill="#047857"/>
+    <!-- Amazon basin highlight -->
+    <path d="M430 270 Q465 285 460 325 Q430 330 425 295 Z" fill="#10b981"/>
+    <!-- Andes Mountain Ridge (Pacific Rim) -->
+    <path d="M410 270 L406 310 L412 350 L418 390 L425 415" stroke="#fbbf24" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.95"/>
+    <!-- Peru Indicator Ping -->
+    <circle cx="410" cy="310" r="7" fill="#ef4444"/>
+    <circle cx="410" cy="310" r="16" fill="none" stroke="#ef4444" stroke-width="2" opacity="0.7">
+      <animate attributeName="r" values="7;22" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Orbital Satellite Track -->
+  <ellipse cx="450" cy="310" rx="280" ry="110" fill="none" stroke="url(#orbitGrad)" stroke-width="2.5" stroke-dasharray="8 6" transform="rotate(-18 450 310)"/>
+
+  <!-- Satellite Station -->
+  <g transform="translate(680, 195)">
+    <rect x="-12" y="-8" width="24" height="16" rx="4" fill="#e2e8f0"/>
+    <line x1="-36" y1="0" x2="-12" y2="0" stroke="#38bdf8" stroke-width="3"/>
+    <rect x="-56" y="-12" width="20" height="24" rx="2" fill="#0284c7" stroke="#38bdf8" stroke-width="1.5"/>
+    <line x1="12" y1="0" x2="36" y2="0" stroke="#38bdf8" stroke-width="3"/>
+    <rect x="36" y="-12" width="20" height="24" rx="2" fill="#0284c7" stroke="#38bdf8" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="4" fill="#10b981"/>
+  </g>
+
+  <!-- Telemetry Data Overlay Cards -->
+  <g transform="translate(60, 60)">
+    <rect width="210" height="85" rx="16" fill="#0f172a" fill-opacity="0.85" stroke="#334155" stroke-width="1.5"/>
+    <text x="18" y="30" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="600" letter-spacing="1">TELEMETRÍA GLOBAL</text>
+    <text x="18" y="58" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="24" font-weight="700">+1.48 °C</text>
+    <text x="120" y="58" fill="#ef4444" font-family="system-ui, sans-serif" font-size="12" font-weight="600">▲ Anomalía</text>
+    <text x="18" y="75" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">CO2 Atmosférico: 423.8 ppm</text>
+  </g>
+
+  <g transform="translate(630, 470)">
+    <rect width="210" height="85" rx="16" fill="#0f172a" fill-opacity="0.85" stroke="#10b981" stroke-width="1.5"/>
+    <circle cx="28" cy="30" r="5" fill="#ef4444"/>
+    <text x="42" y="34" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12" font-weight="700">FOCO PERÚ / ANDES</text>
+    <text x="20" y="56" fill="#10b981" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Vigilancia ENSO Activa</text>
+    <text x="20" y="74" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Deshielo Glaciar: -51% sup.</text>
+  </g>
+
+  <text x="60" y="580" fill="#ffffff" font-family="system-ui, sans-serif" font-size="22" font-weight="800" letter-spacing="3" opacity="0.9">GEOCLIMA GLOBAL · COMMAND CENTER</text>
+</svg>

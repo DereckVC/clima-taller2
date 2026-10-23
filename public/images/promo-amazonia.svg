@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="amazonSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="50%" stop-color="#065f46"/>
+      <stop offset="100%" stop-color="#022c22"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" rx="20" fill="url(#amazonSky)"/>
+  <!-- Canopy Layer 1 -->
+  <circle cx="80" cy="180" r="70" fill="#047857" opacity="0.7"/>
+  <circle cx="180" cy="190" r="85" fill="#059669" opacity="0.8"/>
+  <circle cx="300" cy="175" r="75" fill="#047857" opacity="0.7"/>
+  <circle cx="380" cy="195" r="65" fill="#065f46" opacity="0.9"/>
+  <!-- Canopy Layer 2 Front -->
+  <circle cx="30" cy="220" r="60" fill="#10b981"/>
+  <circle cx="120" cy="220" r="70" fill="#059669"/>
+  <circle cx="230" cy="215" r="65" fill="#10b981"/>
+  <circle cx="340" cy="225" r="70" fill="#047857"/>
+  <!-- Amazon River Meander -->
+  <path d="M0,130 Q120,80 200,120 T400,90" fill="none" stroke="#38bdf8" stroke-width="14" opacity="0.85"/>
+  <path d="M0,130 Q120,80 200,120 T400,90" fill="none" stroke="#e0f2fe" stroke-width="3" opacity="0.6"/>
+  <!-- Satellite Radar Scan Line -->
+  <line x1="80" y1="20" x2="320" y2="170" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5 5" opacity="0.8"/>
+  <circle cx="80" cy="20" r="6" fill="#f59e0b"/>
+  <!-- Tag -->
+  <rect x="20" y="20" width="160" height="28" rx="6" fill="#0f172a" fill-opacity="0.85" stroke="#10b981" stroke-width="1"/>
+  <text x="30" y="38" fill="#10b981" font-family="sans-serif" font-size="11" font-weight="700">BRASIL &amp; PERÚ · BIOMA</text>
+</svg>
